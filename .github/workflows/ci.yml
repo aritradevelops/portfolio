@@ -6,18 +6,12 @@ on:
 
 jobs:
   build:
-    environment: Automation
+    environment: Portfolio
     runs-on: ubuntu-latest
     
     steps:
     - name: Checkout Code
-      uses: actions/checkout@v3
-      
-    - name: Install Buildx
-      id: buildx
-      uses: crazy-max/ghaction-docker-buildx@v1
-      with:
-        version: latest
+      uses: actions/checkout@v3     
         
     - name: Login To Dockerhub
       env:

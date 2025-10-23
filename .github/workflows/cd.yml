@@ -1,5 +1,4 @@
-name: Clients web CD Pipeline
-
+name: Clients web 
 on:
   workflow_run:
     workflows: ["CI Pipeline"]
@@ -9,7 +8,7 @@ on:
 jobs:
 
   build:
-    environment: Automation
+    environment: Portfolio
     runs-on: ubuntu-latest
 
     steps:
