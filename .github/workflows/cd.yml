@@ -15,10 +15,10 @@ jobs:
     - name: Deploy to server
       uses: garygrossgarten/github-action-ssh@release
       with:
-        host: ${{ secrets.SSH_HOST_WEB }}
-        username: ${{ secrets.SSH_USER_WEB }}
-        privateKey: ${{ secrets.SSH_PRIVATE_KEY_WEB }}
-        passphrase: ${{ secrets.DO_PASSPHRASE_WEB }}
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
+        passphrase: ${{ secrets.DO_PASSPHRASE }}
         command: |
           sudo docker pull aritradevelops/aritradevelops:latest
           sudo docker stop aritradevelops || true
