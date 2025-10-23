@@ -1,0 +1,27 @@
+name: Clients web CD Pipeline
+
+on:
+  workflow_run:
+    workflows: ["CI Pipeline"]
+    types:
+      - completed
+
+jobs:
+
+  build:
+    environment: Automation
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Deploy to server
+      uses: garygrossgarten/github-action-ssh@release
+      with:
+        host: ${{ secrets.SSH_HOST_WEB }}
+        username: ${{ secrets.SSH_USER_WEB }}
+        privateKey: ${{ secrets.SSH_PRIVATE_KEY_WEB }}
+        passphrase: ${{ secrets.DO_PASSPHRASE_WEB }}
+        command: |
+          sudo docker pull aritradevelops/aritradevelops:latest
+          sudo docker stop aritradevelops || true
+          sudo docker rm -f aritradevelops || true
+          sudo docker run -d -p 3001:3000 --name aritradevelops aritradevelops/aritradevelops:latest
