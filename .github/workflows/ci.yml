@@ -11,7 +11,13 @@ jobs:
     
     steps:
     - name: Checkout Code
-      uses: actions/checkout@v3     
+      uses: actions/checkout@v3
+           
+    - name: Install Buildx
+      id: buildx
+      uses: crazy-max/ghaction-docker-buildx@v1
+      with:
+        version: latest
         
     - name: Login To Dockerhub
       env:
