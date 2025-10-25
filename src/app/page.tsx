@@ -174,7 +174,7 @@ export default function Page() {
                   <Markdown className={"prose max-w-full dark:prose-invert text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"}>
                     I have been a [super contributor](https://www.holopin.io/@aritradevelops#) in
                     hacktoberfest 2025 and I have finished the oss.gg at
-                    [12th position](https://oss.gg/aritradevelops). Here's some of my contributions:
+                    [12th position](https://oss.gg/aritradevelops). Here are some of my contributions:
                   </Markdown>
                 </p>
               </div>
