@@ -165,12 +165,17 @@ export default function Page() {
                   I like building things
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  During my free time, I contributed to{" "}
+                  {/* During my free time, I contributed to{" "}
                   {DATA.contributions.length}+ open source projects. People from around the
                   world comes together and build incredible things.
                   It was eye-opening to see the endless possibilities
                   brought to life by a group of motivated and passionate
-                  individuals.
+                  individuals. */}
+                  <Markdown className={"prose max-w-full dark:prose-invert text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"}>
+                    I have been a [super contributor](https://www.holopin.io/@aritradevelops#) in
+                    hacktoberfest 2025 and I have finished the oss.gg at
+                    [12th position](https://oss.gg/aritradevelops). Here's some of my contributions:
+                  </Markdown>
                 </p>
               </div>
             </div>

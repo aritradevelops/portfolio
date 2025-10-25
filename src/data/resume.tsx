@@ -325,7 +325,7 @@ export const DATA = {
       title: "Hanko",
       year: "2024",
       events: ["hacktoberfest", "oss.gg"],
-      description: "Live integration and bug hunting, proposed solution",
+      description: "Live integration and bug hunting with proposed solution",
       image: "https://avatars.githubusercontent.com/u/20222142?s=48&v=4",
       links: [
         {
