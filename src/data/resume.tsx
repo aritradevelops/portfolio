@@ -82,28 +82,21 @@ export const DATA = {
       start: "June 2022",
       end: "Present",
       description:
-        `[**Simplified Checkout**](https://www.besimplified.com/checkout/)
+        `
+  - Designed and developed backend microservices for modern SaaS products using **Golang, Node.js, TypeScript, Kafka, Redis, MongoDB and PostgreSQL**, handling high concurrency and computation-heavy request paths in shared environments.
 
-* Engineered a high-performance theme rendering service capable of serving thousands of admin-built checkout themes at over **100k requests/sec** by storing compiled templates in AWS S3 and using Redis-backed precomputed data.
-* Reduced page render latency by **~80%** using a **size-based LRU cache** for compiled templates and AWS Sticky Sessions to minimize cache misses.
-* Designed and implemented a **custom HTML templating language** leveraging comment directives and data attributes to inject dynamic data such as pricing, product details, and user information without disrupting markup integrity.
-* Architected a **modular provider system** supporting seamless integration with multiple e-commerce platforms (Shopify, WooCommerce) and CRMs (Sticky, CheckoutChamp, Vrio) through an auto-discoverable abstraction layer.
-* Enhanced platform security with **brute-force protection**, **fraud detection**, and **intelligent traffic routing** mechanisms for A/B testing and performance monitoring.
+  - Built a scalable theme rendering pipeline leveraging **CDN offloading**, **Redis-based precomputation**, **in-memory size-based LRU caching**, and **sticky sessions**, significantly reducing render latency and cache misses.
 
-**Simplified Core**
+  - Designed a provider-based architecture using **interfaces and factory patterns** to support multiple CRMs and e-commerce platforms, enabling seamless addition of new integrations without modifying existing production code.
+  - Developed a custom **HTML comment and data-attribute-based templating language** to inject dynamic runtime data into static templates without impacting HTML structure or performance.
+  - Created an internal backend framework and CLI to auto-generate production-ready **CRUD services** with built-in authentication (JWT), authorization, Kafka integration, logging, querying, and i18n—improving developer productivity and consistency.
 
-* Architected and developed a **unified backend framework** powering all Simplified products, providing **one-command CRUD generation** with built-in authentication (JWT), authorization (DAC model), and hook-based extensibility.
-* Integrated **Kafka-based event streaming**, advanced query utilities (pagination, sorting, filtering, search), and structured logging for streamlined inter-service communication.
-* Automated schema validation, error handling, and OpenAPI documentation generation to enforce standardization and consistency across microservices.
-* Implemented **internationalization (i18n)** support, enabling all Simplified services to be multi-language ready.
-* Adopted company-wide as the foundation for new product microservices, improving development velocity by **50%**, scalability, and maintainability.
+  - Architected a secure **plugin-based backend framework** for the Simplified HR Marketplace, enabling sandboxed third-party extensions with controlled permissions and event-driven lifecycle hooks.
 
-[**Simplified HR**](https://www.besimplified.com/hr/)
+  - Implemented a fault-tolerant leave crediting system using **schedulers, Google Cloud Tasks, and worker pools**, with retries, fallbacks, and alerting to handle large employee datasets reliably.
 
-* Designed and implemented an **automated leave crediting scheduler** capable of handling thousands of employees with retry, fallback, and failure notification mechanisms.
-* Used **Google Cloud Tasks (GCT)** for distributed job handling and worker pools for concurrent credit computation, ensuring high availability and resilience.
-* Built and maintained multiple HR modules, including **leave management**, **ticketing**, **employee tracking**, **notification system**, and **scheduler service**.
-* Enhanced reliability and transparency by integrating alerting and logging mechanisms that notify administrators in case of critical failures or missed crediting events.`,
+  - Actively participated in production incident analysis and post-mortems, contributing to improvements in **system reliability, observability, and performance**.
+        `,
     },
   ],
   education: [
