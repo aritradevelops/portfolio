@@ -13,6 +13,7 @@ export const DATA = {
   summary:
     "I started my journey in [Electrical Engineering](#education), but somewhere between the realm of circuits and transistors, I stumbled upon programming — and it completely changed my path. What began as a small curiosity during my Higher Secondary days quickly turned into a full-blown passion. I started learning web development, and before I knew it, I was deep into [building products](#work), [solving tough engineering challenges](#projects), and [contributing to open source](#contributions). To know the science behind what I was building, I later pursued a [B.Tech in Computer Science](#education), which helped me bridge the gap between practical development and core computing concepts.",
   avatarUrl: "/me.jpeg",
+  resumeUrl: "/Aritra_Sadhukhan_Resume.pdf",
   skills: [
     "Node.js",
     "Typescript",
@@ -79,23 +80,47 @@ export const DATA = {
       location: "New Town, WB, IN",
       title: "Engineer Web",
       logoUrl: "/codeclouds.jpeg",
-      start: "June 2022",
+      start: "April 2024",
       end: "Present",
       description:
         `
-  - Designed and developed backend microservices for modern SaaS products using **Golang, Node.js, TypeScript, Kafka, Redis, MongoDB and PostgreSQL**, handling high concurrency and computation-heavy request paths in shared environments.
+  - Architected a headless, Python-based workflow orchestration engine for a telehealth automation platform, supporting 7+ automation use cases — including abandoned-cart retargeting, prescription renewal reminders, and multi-channel patient communication — with durable wait states and idempotent, Kafka-driven execution.
 
-  - Built a scalable theme rendering pipeline leveraging **CDN offloading**, **Redis-based precomputation**, **in-memory size-based LRU caching**, and **sticky sessions**, significantly reducing render latency and cache misses.
+  - Designed a centralized event logging and traceability pipeline spanning 5 microservices for a telehealth platform using AWS Firehose, Lambda, S3, and Athena, with Parquet compression and automated lifecycle tiering to reduce long-term storage costs.
 
-  - Designed a provider-based architecture using **interfaces and factory patterns** to support multiple CRMs and e-commerce platforms, enabling seamless addition of new integrations without modifying existing production code.
-  - Developed a custom **HTML comment and data-attribute-based templating language** to inject dynamic runtime data into static templates without impacting HTML structure or performance.
-  - Created an internal backend framework and CLI to auto-generate production-ready **CRUD services** with built-in authentication (JWT), authorization, Kafka integration, logging, querying, and i18n—improving developer productivity and consistency.
+  - Re-architected a failing product synchronization pipeline handling up to 100,000 products using AWS SQS and Lambda, replacing in-process threaded imports with resilient cursor-based batching to eliminate rate-limit failures and database overload.
 
-  - Architected a secure **plugin-based backend framework** for the Simplified HR Marketplace, enabling sandboxed third-party extensions with controlled permissions and event-driven lifecycle hooks.
+  - Designed a TypeScript backend framework for Fastify and Express.js adopted across 30+ microservices, standardizing auth, validation, and Kafka event streaming through a CLI code generator, cutting new-service boilerplate by ~40%.
 
-  - Implemented a fault-tolerant leave crediting system using **schedulers, Google Cloud Tasks, and worker pools**, with retries, fallbacks, and alerting to handle large employee datasets reliably.
+  - Led load testing and performance optimization for a high-traffic e-commerce checkout platform using Locust, resolving bottlenecks via static routing, a Fastify migration, and PM2 clustering to sustain ~30,000 requests/second.
 
-  - Actively participated in production incident analysis and post-mortems, contributing to improvements in **system reliability, observability, and performance**.
+  - Engineered a two-tier caching architecture using Redis, in-memory LRU caches, and Pub/Sub invalidation, improving template rendering throughput by ~5x across horizontally scaled instances.
+
+  - Built a multi-tenant analytics backend using Kafka and MongoDB aggregation pipelines, processing ~1M events and 100,000 orders to power real-time sales, conversion, and fraud-detection dashboards.
+
+  - Built a multi-tenant SSO and identity platform using OAuth 2.0/OIDC and JWT-based authentication, supporting 4 MFA methods (TOTP, OTP, passkeys, recovery tokens) with device-level session management and RBAC across internal workspace applications.
+
+  - Built an experimentation engine for checkout upsell optimization, enabling configurable A/B and split testing with session-persistent variant assignment across ~1M daily checkout requests.
+
+  - Designed an extensible integration framework unifying 5 CRM and e-commerce platforms (Sticky, CheckoutChamp, Vrio, Shopify, WooCommerce) through a shared abstraction layer using the Abstract Factory pattern.
+
+  - Designed a custom HTML templating language and synchronous rendering engine for a browser-based checkout builder, serving ~1M requests per day across merchant-customized checkout pages resolved live from Amazon S3.
+        `,
+    },
+    {
+      company: "CodeClouds",
+      href: "https://www.codeclouds.com/",
+      badges: [],
+      location: "New Town, WB, IN",
+      title: "Full Stack Developer",
+      logoUrl: "/codeclouds.jpeg",
+      start: "June 2022",
+      end: "April 2024",
+      description:
+        `
+  - Architected a modular leave accrual engine for an HR management platform, consolidating 52 policy combinations into 4 extensible strategies with cron-driven, idempotent asynchronous processing via Google Cloud Tasks.
+
+  - Built and maintained REST APIs and microservices across 6 core HR platform modules — leave management, ticketing, notifications, scheduling, knowledge base, and centralized logging — using Node.js, Express.js, TypeScript, and Kafka.
         `,
     },
   ],

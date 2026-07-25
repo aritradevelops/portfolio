@@ -57,11 +57,11 @@ export default function Page() {
           </BlurFade>
           {DATA.work.map((work, id) => (
             <BlurFade
-              key={work.company}
+              key={work.company + work.title}
               delay={BLUR_FADE_DELAY * 6 + id * 0.05}
             >
               <ResumeCard
-                key={work.company}
+                key={work.company + work.title}
                 logoUrl={work.logoUrl}
                 altText={work.company}
                 title={work.company}
@@ -164,7 +164,7 @@ export default function Page() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   I like building things
                 </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <div className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   {/* During my free time, I contributed to{" "}
                   {DATA.contributions.length}+ open source projects. People from around the
                   world comes together and build incredible things.
@@ -176,7 +176,7 @@ export default function Page() {
                     hacktoberfest 2025 and I have finished the oss.gg at
                     [12th position](https://oss.gg/aritradevelops). Here are some of my contributions:
                   </Markdown>
-                </p>
+                </div>
               </div>
             </div>
           </BlurFade>

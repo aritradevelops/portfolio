@@ -1,3 +1,4 @@
+import { Icons } from "@/components/icons";
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import { ModeToggle } from "@/components/mode-toggle";
 import { buttonVariants } from "@/components/ui/button";
@@ -36,6 +37,26 @@ export default function Navbar() {
             </Tooltip>
           </DockIcon>
         ))}
+        <Separator orientation="vertical" className="h-full" />
+        <DockIcon>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <a
+                href={DATA.resumeUrl}
+                download
+                className={cn(
+                  buttonVariants({ variant: "ghost", size: "icon" }),
+                  "size-12"
+                )}
+              >
+                <Icons.download className="size-4" />
+              </a>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Resume</p>
+            </TooltipContent>
+          </Tooltip>
+        </DockIcon>
         <Separator orientation="vertical" className="h-full" />
         {Object.entries(DATA.contact.social)
           .filter(([_, social]) => social.navbar)
