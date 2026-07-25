@@ -1,11 +1,17 @@
 import { ContributionCard } from "@/components/contribution-card";
 import { HackathonCard } from "@/components/hackathon-card";
+import { Icons } from "@/components/icons";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
@@ -32,10 +38,17 @@ export default function Page() {
               />
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-28 border">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
-                <AvatarFallback>{DATA.initials}</AvatarFallback>
-              </Avatar>
+              <Link
+                href={DATA.avatarUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer"
+              >
+                <Avatar className="size-28 border">
+                  <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+                  <AvatarFallback>{DATA.initials}</AvatarFallback>
+                </Avatar>
+              </Link>
             </BlurFade>
           </div>
         </div>
@@ -53,7 +66,23 @@ export default function Page() {
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className="text-xl font-bold">Work Experience</h2>
+            <div className="flex items-center justify-between">
+              <h2 className="text-xl font-bold">Work Experience</h2>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a
+                    href={DATA.resumeUrl}
+                    download
+                    className="text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    <Icons.download className="size-4 animate-bounce" />
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Download Resume</p>
+                </TooltipContent>
+              </Tooltip>
+            </div>
           </BlurFade>
           {DATA.work.map((work, id) => (
             <BlurFade
@@ -87,12 +116,14 @@ export default function Page() {
             >
               <ResumeCard
                 key={award.title + award.issuer}
-                logoUrl=""
+                href={award.href}
+                logoUrl={award.logoUrl}
                 altText={award.issuer}
                 title={award.title}
                 subtitle={award.issuer}
                 period={award.date}
                 description={award.description}
+                alwaysExpanded={award.alwaysExpanded}
               />
             </BlurFade>
           ))}

@@ -20,6 +20,8 @@ interface ResumeCardProps {
   period: string;
   description?: string;
   icon?: React.ReactNode;
+  /** Show the description permanently instead of gating it behind a click, so `href` navigates normally. */
+  alwaysExpanded?: boolean;
 }
 export const ResumeCard = ({
   logoUrl,
@@ -31,11 +33,12 @@ export const ResumeCard = ({
   period,
   description,
   icon,
+  alwaysExpanded,
 }: ResumeCardProps) => {
-  const [isExpanded, setIsExpanded] = React.useState(false);
+  const [isExpanded, setIsExpanded] = React.useState(!!alwaysExpanded);
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    if (description) {
+    if (description && !alwaysExpanded) {
       e.preventDefault();
       setIsExpanded(!isExpanded);
     }

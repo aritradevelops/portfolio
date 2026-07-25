@@ -66,7 +66,12 @@ export const DATA = {
       title: "Outstanding Performance Award in Development",
       issuer: "Spectrum",
       date: "2023",
-      description: "![Receiving the Outstanding Performance Award in Development at Spectrum, 2023](/spectrum_award.jpg)",
+      href: "https://careers.codeclouds.com/spectrum/",
+      logoUrl: `data:image/svg+xml,${encodeURIComponent(
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect width="40" height="40" rx="20" fill="#8b5cf6"/><text x="20" y="27" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#ffffff">S</text></svg>'
+      )}`,
+      description: "![Receiving the Outstanding Performance Award in Development at Spectrum, 2023](/spectrum.jpeg)",
+      alwaysExpanded: true,
     },
   ],
   certifications: [
