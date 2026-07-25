@@ -2,6 +2,15 @@ import { ContributionDetails } from "@/components/contribution-card";
 import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
 
+interface Certification {
+  title: string;
+  issuer: string;
+  logoUrl: string;
+  issueDate: string;
+  certificateLink: string;
+  techIcon?: React.ReactNode;
+}
+
 export const DATA = {
   name: "Aritra Sadhukhan",
   initials: "AS",
@@ -20,6 +29,7 @@ export const DATA = {
     "Go",
     "Python",
     "MongoDB",
+    "DocumentDB",
     "Postgres",
     "Docker",
     "Kafka",
@@ -30,12 +40,100 @@ export const DATA = {
     "WebRTC",
     "gRPC",
     "Linux",
+    "GitHub Actions",
     "AWS S3",
     "AWS EC2",
     "AWS ECS",
+    "AWS Lambda",
+    "AWS SQS",
+    "AWS Firehose",
+    "AWS Athena",
+    "AWS IAM",
+    "AWS ECR",
     "OCI",
-    "Locust"
+    "Locust",
+    "FastAPI",
+    "LangChain",
+    "LangGraph",
+    "RAG",
+    "ChromaDB",
+    "NumPy",
+    "pandas",
+    "scikit-learn",
   ],
+  awards: [
+    {
+      title: "Outstanding Performance Award in Development",
+      issuer: "Spectrum",
+      date: "2023",
+      description: "![Receiving the Outstanding Performance Award in Development at Spectrum, 2023](/spectrum_award.jpg)",
+    },
+  ],
+  certifications: [
+    {
+      title: "Model Context Protocol Advanced Topics",
+      issuer: "Anthropic",
+      logoUrl: "/Anthropic.jpg",
+      issueDate: "May 2026",
+      certificateLink: "https://verify.skilljar.com/c/dtsx672xu6t3",
+    },
+    {
+      title: "The AI Engineer Course 2026: Complete AI Engineer Bootcamp",
+      issuer: "Udemy",
+      logoUrl: "/udemy.png",
+      issueDate: "May 2026",
+      certificateLink: "https://www.udemy.com/certificate/UC-85071a50-cc70-46ec-bd27-9baf0e6f7e2d/",
+      techIcon: <Icons.python className="size-4" />,
+    },
+    {
+      title: "AWS Cloud Practitioner",
+      issuer: "Udemy",
+      logoUrl: "/udemy.png",
+      issueDate: "Apr 2026",
+      certificateLink: "https://www.udemy.com/certificate/UC-639ebef6-9f4a-4450-bf18-c81e473ddcbd/",
+      // TODO: swap in Icons.aws once the AWS logo is added to icons.tsx + public/
+    },
+    {
+      title: "Microservices With Go and GRPC",
+      issuer: "Udemy",
+      logoUrl: "/udemy.png",
+      issueDate: "Feb 2025",
+      certificateLink: "https://www.udemy.com/certificate/UC-9e06c6a6-5c87-497d-87a2-a0ab253ee3a4/",
+      techIcon: <Icons.go className="size-4" />,
+    },
+    {
+      title: "MySQL",
+      issuer: "Udemy",
+      logoUrl: "/udemy.png",
+      issueDate: "Feb 2025",
+      certificateLink: "https://www.udemy.com/certificate/UC-af21f0a9-b96d-4e0c-b8c6-82c0800123fb/",
+      techIcon: <Icons.mysql className="size-4" />,
+    },
+    {
+      title: "Docker",
+      issuer: "Udemy",
+      logoUrl: "/udemy.png",
+      issueDate: "Jan 2024",
+      certificateLink: "https://www.udemy.com/certificate/UC-66a1d601-a2ec-453a-9335-aed0eeaae2f0/",
+      techIcon: <Icons.docker className="size-4" />,
+    },
+    {
+      title: "Typescript",
+      issuer: "Udemy",
+      logoUrl: "/udemy.png",
+      issueDate: "Jan 2024",
+      certificateLink: "https://www.udemy.com/certificate/UC-41a78d80-b648-4999-8db0-a98b1ac90821/",
+      techIcon: <Icons.typescript className="size-4" />,
+    },
+    {
+      title: "Python",
+      issuer: "Udemy",
+      logoUrl: "/udemy.png",
+      issueDate: "Jan 2024",
+      certificateLink: "https://www.udemy.com/certificate/UC-a6969443-5fcc-4846-90ab-f17cb1e643d5/",
+      techIcon: <Icons.python className="size-4" />,
+    },
+  ] as Certification[],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "https://medium.com/@aritrasadhukhan430", icon: NotebookIcon, label: "Blog" },

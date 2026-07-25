@@ -19,6 +19,7 @@ interface ResumeCardProps {
   badges?: readonly string[];
   period: string;
   description?: string;
+  icon?: React.ReactNode;
 }
 export const ResumeCard = ({
   logoUrl,
@@ -29,6 +30,7 @@ export const ResumeCard = ({
   badges,
   period,
   description,
+  icon,
 }: ResumeCardProps) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
 
@@ -61,6 +63,11 @@ export const ResumeCard = ({
             <div className="flex items-center justify-between gap-x-2 text-base">
               <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
                 {title}
+                {icon && (
+                  <span className="ml-1.5 inline-flex items-center">
+                    {icon}
+                  </span>
+                )}
                 {badges && (
                   <span className="inline-flex gap-x-1">
                     {badges.map((badge, index) => (
