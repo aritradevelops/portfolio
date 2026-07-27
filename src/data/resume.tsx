@@ -149,7 +149,7 @@ export const DATA = {
     social: {
       Email: {
         name: "Email",
-        url: "mailto:aritrasadhukhan430",
+        url: "mailto:aritrasadhukhan430@gmail.com",
         icon: Icons.email,
         navbar: true,
       },
