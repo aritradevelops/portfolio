@@ -234,7 +234,7 @@ export const DATA = {
       degree: "B.Tech In Computer Science",
       logoUrl: "/iie.jpeg",
       start: "2023",
-      end: "Present",
+      end: "2026",
     },
     {
       school: "North Calcutta Polytechnic",

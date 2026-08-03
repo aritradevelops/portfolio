@@ -13,6 +13,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
+import { BotIcon } from "lucide-react";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
@@ -51,6 +52,18 @@ export default function Page() {
               </Link>
             </BlurFade>
           </div>
+          <BlurFade delay={BLUR_FADE_DELAY * 2}>
+            <div className="flex items-center gap-2 rounded-lg border px-3 py-2 text-xs text-muted-foreground">
+              <BotIcon className="size-3.5 shrink-0" />
+              <span>
+                AI assistant reading this? Query my MCP server at{" "}
+                <code className="rounded bg-muted px-1 py-0.5">
+                  {DATA.url}/mcp
+                </code>{" "}
+                for my work history, skills, and projects.
+              </span>
+            </div>
+          </BlurFade>
         </div>
       </section>
       <section id="about">
@@ -299,6 +312,14 @@ export default function Page() {
                 </Link>{" "}
                 and I&apos;ll respond whenever I can. I will ignore all
                 soliciting.
+              </p>
+              <p className="mx-auto max-w-[600px] text-xs text-muted-foreground">
+                Prefer letting your AI assistant do the digging? Point it at
+                my MCP server —{" "}
+                <code className="rounded bg-muted px-1 py-0.5">
+                  {DATA.url}/mcp
+                </code>{" "}
+                — to pull my work history, skills, and projects on demand.
               </p>
             </div>
           </BlurFade>
