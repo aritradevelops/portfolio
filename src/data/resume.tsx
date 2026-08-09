@@ -215,7 +215,7 @@ export const DATA = {
       href: "https://www.codeclouds.com/",
       badges: [],
       location: "New Town, WB, IN",
-      title: "Full Stack Developer",
+      title: "Assistant Engineer Web",
       logoUrl: "/codeclouds.jpeg",
       start: "June 2022",
       end: "April 2024",
@@ -231,7 +231,7 @@ export const DATA = {
     {
       school: "Ideal Institute of Engineering",
       href: "https://iiekalyani.com/",
-      degree: "B.Tech In Computer Science",
+      degree: "B.Tech In Computer Science (CGPA: 8.3)",
       logoUrl: "/iie.jpeg",
       start: "2023",
       end: "2026",
