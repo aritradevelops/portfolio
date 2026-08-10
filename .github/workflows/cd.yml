@@ -23,4 +23,4 @@ jobs:
           sudo docker pull aritradevelops/aritradevelops:latest
           sudo docker stop aritradevelops || true
           sudo docker rm -f aritradevelops || true
-          sudo docker run -d -p 3001:3000 --name aritradevelops aritradevelops/aritradevelops:latest
+          sudo docker run -d -p 3000:3000 --name aritradevelops aritradevelops/aritradevelops:latest
